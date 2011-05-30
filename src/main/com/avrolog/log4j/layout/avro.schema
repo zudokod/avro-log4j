@@ -1,0 +1,14 @@
+{
+      "namespace": "test.avro",
+      "name": "log4j",
+      "type": "record",
+      "fields": [
+          {"name": "logger", "type": ["string","null"]},
+          {"name": "level", "type": ["string", "null"]},
+          {"name": "timestamp", "type":  ["long", "null"]},
+          {"name": "threadName", "type":  ["string", "null"]},
+          {"name": "message", "type":  ["string", "null"]},
+          {"name": "NDC", "type":  ["string", "null"]},  
+          {"name": "MDC",  "type":[ {"type": "map", "values": "string"}, "null"]}          
+          ]
+}
