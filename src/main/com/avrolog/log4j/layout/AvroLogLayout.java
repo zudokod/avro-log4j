@@ -56,11 +56,9 @@ public class AvroLogLayout extends Layout {
 				GenericDatumWriter<GenericRecord> writer = new GenericDatumWriter<GenericRecord>(avroSchema);
 				Encoder encoder = null;
 				bao = new ByteArrayOutputStream();
-				if(BINARY_TYPE.equalsIgnoreCase(type)){				
-					encoder = EncoderFactory.get().binaryEncoder(bao, null);
-				}else{
-					encoder = EncoderFactory.get().jsonEncoder(avroSchema, bao);
-				}			
+				
+				encoder = EncoderFactory.get().jsonEncoder(avroSchema, bao);
+							
 				GenericRecord record = new GenericData.Record(avroSchema);
 				putBasicFields(event, record);
 				putNDCValues(event, record);
