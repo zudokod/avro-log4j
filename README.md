@@ -9,6 +9,8 @@
   
   add the required libraries to class path
   
+  Use Avro's DataFileWriteTool to read new-line delimited JSON records in the log and writes an Avro data file.
+  
 ### TODO
 
 	- supporting binary serialization
